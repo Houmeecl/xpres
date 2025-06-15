@@ -1,0 +1,46 @@
+{
+  "name": "vecinoxpress-backend",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc && copyfiles -u 1 src/**/*.sql dist && copyfiles -u 1 src/**/*.json dist",
+    "start": "cross-env NODE_ENV=production node dist/index.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.540.0",
+    "@aws-sdk/s3-request-presigner": "^3.540.0",
+    "@neondatabase/serverless": "^0.6.0",
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^1.6.7",
+    "connect-pg-simple": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.29.2",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "memorystore": "^1.6.7",
+    "module-alias": "^2.2.3",
+    "multer": "^1.4.5-lts.1",
+    "nanoid": "^5.0.2",
+    "openai": "^4.22.1",
+    "pdf-lib": "^1.17.1",
+    "pg": "^8.11.3",
+    "qrcode": "^1.5.3",
+    "uuid": "^9.0.0",
+    "vite": "^5.2.0",
+    "ws": "^8.16.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.3"
+  },
+  "_moduleAliases": {
+    "@shared": "dist/shared"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "vecinoxpress-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc && copyfiles -u 1 src/**/*.sql dist && copyfiles -u 1 src/**/*.json dist",
+    "start": "cross-env NODE_ENV=production node dist/index.js"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.8.3"
+  },
+  "_moduleAliases": {
+    "@shared": "../shared"
+  }
+}
